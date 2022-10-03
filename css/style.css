@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*             general           */
+.conteinerpadreindex {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "nav cont ";
+}
+
+h1 {
+  color: #401F0D;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 40px;
+  padding-top: 35px;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+
+.navegacion {
+  grid-area: nav;
+  background-color: #401F0D;
+}
+
+.contenido {
+  grid-area: cont;
+  overflow: auto;
+}
+.contenido .contenidos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 55px;
+  padding: 5px;
+  overflow: auto;
+}
+.contenido .contenidoindex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  overflow: auto;
+}
+
+.iconoshop {
+  display: flex;
+  position: fixed;
+  width: 95%;
+  height: 100px;
+  margin: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+}
+.iconoshop:hover {
+  transform: translate(1px, 1px);
+}
+
+/*barra de navegacion*/
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow: hidden;
+  align-items: flex-start;
+  width: 25%;
+  height: 100%;
+}
+.navegacion .boxnavegacion {
+  width: 100%;
+  margin-top: 20px;
+}
+.navegacion .boxnavegacion .navegacionitems a {
+  text-decoration: none;
+}
+.navegacion .boxnavegacion .navegacionitems a .item {
+  text-decoration: none;
+  color: #F2ECCE;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  margin: 15px;
+  padding-top: 10px;
+}
+.navegacion .boxnavegacion .navegacionitems a .item:hover {
+  transform: translate(1px, 1px);
+}
+.navegacion .logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30%;
+  width: 100%;
+  height: 100%;
+}
+.navegacion .logo:hover {
+  transform: translate(1px, 1px);
+}
+.navegacion .logocelular {
+  display: none;
+}
+.navegacion .iconoshopclaro {
+  display: none;
+}
+
+/*index*/
+#arriba {
+  display: inline-table;
+  background-color: #401F0D;
+}
+
+.navegacionitems {
+  text-decoration: none;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  width: 100%;
+}
+
+/*             preguntas             */
+.boxpreguntas {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+}
+.boxpreguntas .preguntas li a {
+  list-style-type: disc;
+  text-decoration: none;
+  color: #401F0D;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.boxpreguntas .preguntas li a:hover {
+  opacity: 90%;
+}
+
+.boxrespuestas {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+}
+.boxrespuestas .respuestas li {
+  text-decoration: none;
+  color: #401F0D;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10x;
+  margin-top: 10px;
+}
+
+/*             contacto             */
+.boxcontacto {
+  display: flex;
+  flex-direction: column;
+}
+.boxcontacto .contactos li {
+  text-decoration: none;
+  color: #401F0D;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.boxcontacto .contactos a {
+  text-decoration: none;
+  color: #F2ECCE;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-size: small;
+  height: 40px;
+}
+.boxcontacto .contactos .link {
+  background-color: #401F0D;
+  border-radius: 50px;
+  width: 170px;
+}
+.boxcontacto .contactos .link:hover {
+  transform: translate(2px, 2px);
+  background-color: #F2ECCE;
+  color: #401F0D;
+}
+.boxcontacto .contactos .link a img, .boxcontacto .contactos .link svg {
+  padding-right: 5px;
+}
+.boxcontacto .contactos .link a img:hover, .boxcontacto .contactos .link svg:hover {
+  align-items: center;
+  justify-content: center;
+  transform: scale(1.5);
+}
+.boxcontacto .contactos div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 10px;
+}
+.boxcontacto .contactos div p {
+  margin-bottom: 0;
+}
+.boxcontacto p {
+  margin-top: 10px;
+}
+
+/*             shop             */
+.boxproductos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.boxproductos div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.boxproductos .cardpropia {
+  border-color: #F2ECCE;
+  border-radius: 20px;
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 576px) {
+  .conteinerpadreindex {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px;
+    grid-template-areas: "nav" "cont";
+  }
+  .navegacion {
+    width: 100%;
+    height: 200px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+    position: sticky;
+  }
+  .navegacion .boxnavegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+  }
+  .navegacion .boxnavegacion .navegacionitems {
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 5px;
+    padding-left: 0;
+  }
+  .navegacion .logo {
+    display: none;
+  }
+  .navegacion .logocelular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  .imagenesindex {
+    width: 576px;
+  }
+  .iconoshop {
+    display: none;
+  }
+  .iconoshopclaro { /*icono para mobile ver*/
+    display: none;
+  }
+  .boxpreguntas {
+    flex-direction: column;
+  }
+  .respuestas li iframe {
+    width: 576px;
+  }
+  /*             shop             */
+  .productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr 4);
+    gap: 10px;
+    grid-template-areas: "ft1" "ft2" "ft3" "ft4";
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
