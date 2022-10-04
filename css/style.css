@@ -1,3 +1,62 @@
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow: hidden;
+  align-items: flex-start;
+  width: 25%;
+  height: 100%;
+}
+.navegacion .boxnavegacion {
+  width: 100%;
+  margin-top: 20px;
+}
+.navegacion .boxnavegacion .navegacionitems {
+  text-decoration: none;
+  list-style: none;
+  color: #F2ECCE;
+}
+.navegacion .boxnavegacion .navegacionitems .navegacionitems a {
+  text-decoration: none;
+  list-style: none;
+  color: #F2ECCE;
+  list-style: none;
+  text-decoration: none;
+  color: #F2ECCE;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  margin: 15px;
+  padding-top: 10px;
+}
+.navegacion .boxnavegacion .navegacionitems .navegacionitems a:hover {
+  transform: translate(1px, 1px);
+}
+.navegacion .item {
+  text-decoration: none;
+  color: #F2ECCE;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  margin: 15px;
+  padding-top: 10px;
+}
+.navegacion .logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30%;
+  width: 100%;
+  height: 100%;
+}
+.navegacion .logo:hover {
+  transform: translate(1px, 1px);
+}
+.navegacion .logocelular {
+  display: none;
+}
+.navegacion .iconoshopclaro {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +81,7 @@ h1 {
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: black;
+  color: #401F0D;
 }
 
 .navegacion {
@@ -62,52 +121,6 @@ p {
 }
 .iconoshop:hover {
   transform: translate(1px, 1px);
-}
-
-/*barra de navegacion*/
-.navegacion {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  overflow: hidden;
-  align-items: flex-start;
-  width: 25%;
-  height: 100%;
-}
-.navegacion .boxnavegacion {
-  width: 100%;
-  margin-top: 20px;
-}
-.navegacion .boxnavegacion .navegacionitems a {
-  text-decoration: none;
-}
-.navegacion .boxnavegacion .navegacionitems a .item {
-  text-decoration: none;
-  color: #F2ECCE;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  margin: 15px;
-  padding-top: 10px;
-}
-.navegacion .boxnavegacion .navegacionitems a .item:hover {
-  transform: translate(1px, 1px);
-}
-.navegacion .logo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 30%;
-  width: 100%;
-  height: 100%;
-}
-.navegacion .logo:hover {
-  transform: translate(1px, 1px);
-}
-.navegacion .logocelular {
-  display: none;
-}
-.navegacion .iconoshopclaro {
-  display: none;
 }
 
 /*index*/
@@ -231,6 +244,7 @@ p {
   border-color: #F2ECCE;
   border-radius: 20px;
   padding-top: 10px;
+  width: 15rem;
 }
 
 @media only screen and (max-width: 576px) {

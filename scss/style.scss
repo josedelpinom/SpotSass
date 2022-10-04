@@ -1,3 +1,6 @@
+@import"./base/variables";
+@import"./componentes/navegacion";
+
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +16,7 @@
     
 }
 h1{
-    color: #401F0D;
+    color: $color-principal;
     font-family: 'Roboto', sans-serif;
     padding-bottom: 40px;
     padding-top: 35px;
@@ -23,11 +26,11 @@ h1{
 p{
     font-family: 'Roboto', sans-serif;
     font-weight:300;
-    color:black;
+    color: $color-texto2;
 }
 .navegacion{
     grid-area: nav;
-    background-color: #401F0D;
+    background-color: $color-principal;
 }
 .contenido{
     grid-area: cont;
@@ -62,61 +65,12 @@ p{
     justify-content: right;
     &:hover{
         transform: translate(1px, 1px);
-    }
-}
- /*barra de navegacion*/
- .navegacion{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    overflow: hidden;
-    align-items: flex-start;
-    width: 25%;
-    height: 100%;
-    .boxnavegacion{
-        width: 100%;
-        margin-top: 20px;
-        .navegacionitems a{
-            text-decoration: none;
-            .item {
-                text-decoration: none;
-                color: #F2ECCE;
-                font-family: 'Roboto', sans-serif;
-                display: flex;
-                margin: 15px;
-                padding-top: 10px;
-                &:hover{
-                    transform: translate(1px, 1px);
-                }
-            }
-        }
-}
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items:flex-start;
-    margin-top: 30%;
-    width: 100%;
-    height: 100%;
-    &:hover{
-        transform: translate(1px, 1px);
-    }
-}
-.logocelular{
-    display: none;
-}
-.iconoshopclaro{
-    display: none;
-}
- }
-
-
-
+    }}
  /*index*/
 
  #arriba{
     display: inline-table;
-    background-color: #401F0D;
+    background-color: $color-principal;
     
 }
 .navegacionitems{
@@ -139,7 +93,7 @@ p{
         li a{ 
             list-style-type:disc;
             text-decoration: none;
-            color: #401F0D;
+            color: $color-texto1;
             font-family: 'Roboto', sans-serif;
             font-weight:500;
             &:hover{
@@ -155,7 +109,7 @@ p{
     padding-bottom: 20px;
     .respuestas li{
         text-decoration: none;
-        color: #401F0D;
+        color:  $color-texto1;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
         margin-bottom: 10x;
@@ -171,13 +125,13 @@ p{
     .contactos {
         li{ 
     text-decoration: none;
-    color: #401F0D;
+    color: $color-texto1;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
         }
         a{
     text-decoration: none;
-    color:#F2ECCE;
+    color: $color-secundario;
     font-family: 'Roboto',sans-serif;
     font-weight:400;
     padding: 5px;
@@ -189,13 +143,13 @@ p{
     
         }
         .link{
-            background-color:#401F0D;
+            background-color: $color-principal;
             border-radius: 50px;
             width: 170px;
             &:hover{
                 transform: translate(2px, 2px);
-                background-color: #F2ECCE;
-                color:#401F0D;
+                background-color: $color-secundario;
+                color:$color-principal;
             }
             a img, svg{
                 padding-right: 5px;
@@ -238,9 +192,11 @@ p{
     
     }
     .cardpropia{
-        border-color:#F2ECCE;
+        border-color: $color-secundario;
         border-radius: 20px;
         padding-top: 10px;
+        width: 15rem;
+        
     }
 }
 
