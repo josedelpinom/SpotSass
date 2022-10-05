@@ -200,6 +200,32 @@ p{
     }
 }
 
+/*             carrito             */
+.formulario{
+    display: flex;
+    margin: 7px;
+}
+.boton{
+        margin-top: 5px;
+        background-color:$color-secundario;  
+        border-radius: 50px;
+        border-color: $color-secundario;
+        color: black;
+        width: 170px;
+        height: 30px;
+    font-family: 'Roboto',sans-serif;
+    font-weight:300;
+        &:hover{
+            transform: translate(2px, 2px);
+            background-color: lighten($color-secundario, 5%);
+            color:$color-principal;
+        }
+    } 
+
+input{
+    margin-left: 5px;}
+
+
 @media only screen and (max-width: 576px){
     .conteinerpadreindex{
         display: grid;
