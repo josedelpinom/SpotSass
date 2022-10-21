@@ -108,6 +108,9 @@ p {
   align-items: center;
   justify-content: left;
   overflow: auto;
+  margin: 0px;
+  padding: 0%;
+  width: 100%;
 }
 
 .iconoshop {
@@ -138,6 +141,10 @@ p {
   height: 100vh;
   min-height: 300px;
   width: 100%;
+}
+
+.carousel-control-prev {
+  left: 25%;
 }
 
 /*             preguntas             */
@@ -232,6 +239,20 @@ p {
   margin-top: 10px;
 }
 
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: contents;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /*             shop             */
 .boxproductos {
   display: flex;
@@ -284,12 +305,26 @@ input {
   margin-left: 5px;
 }
 
+@media only screen and (min-height: 820px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .carousel-control-prev {
+    left: 0%;
+  }
+}
 @media only screen and (max-width: 576px) {
   .conteinerpadreindex {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px;
     grid-template-areas: "nav" "cont";
+  }
+  .carousel-control-prev {
+    left: 0%;
   }
   .navegacion {
     width: 100%;
@@ -313,6 +348,18 @@ input {
     margin-top: 5px;
     padding-left: 0;
   }
+  .navegacion .iconoshopclaro {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  .navegacion .iconoshop {
+    display: none;
+  }
   .navegacion .logo {
     display: none;
   }
@@ -328,12 +375,6 @@ input {
   .imagenesindex {
     width: 576px;
   }
-  .iconoshop {
-    display: none;
-  }
-  .iconoshopclaro { /*icono para mobile ver*/
-    display: none;
-  }
   .boxpreguntas {
     flex-direction: column;
   }
@@ -341,6 +382,10 @@ input {
     width: 576px;
   }
   /*             shop             */
+  .formulario .input {
+    width: 100px;
+    height: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
